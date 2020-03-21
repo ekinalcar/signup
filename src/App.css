@@ -57,6 +57,7 @@ p {
 
 .box p {
   margin: 0;
+  opacity: 1;
 }
 
 .box-blue {
