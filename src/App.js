@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+
+import img from "./assets/images/icon-error.svg";
+
 import "./App.css";
 
 class App extends Component {
@@ -103,6 +106,7 @@ class App extends Component {
                 placeholder="First Name"
                 type="text"
               />
+              <img src={img} alt="Error" />
               <small>First Name cannot be empty</small>
             </div>
             <div
@@ -117,6 +121,7 @@ class App extends Component {
                 placeholder="Last Name"
                 type="text"
               />
+              <img src={img} alt="Error" />
               <small>Last Name cannot be empty</small>
             </div>
             <div className={errors.email ? "control control-fail" : "control"}>
@@ -129,6 +134,7 @@ class App extends Component {
                 placeholder="Email"
                 type="text"
               />
+              <img src={img} alt="Error" />
               <small>Email cannot be empty</small>
             </div>
             <div
@@ -143,6 +149,7 @@ class App extends Component {
                 placeholder="Password"
                 type="password"
               />
+              <img src={img} alt="Error" />
               <small>Password cannot be empty</small>
             </div>
             <button onClick={this.handleOnSubmit} type="submit">
