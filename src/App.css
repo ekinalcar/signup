@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+body,
+html {
+  height: 100%;
+}
 body {
   font-family: "Poppins", sans-serif;
   background-color: hsl(0, 100%, 74%);
@@ -27,9 +31,14 @@ body {
   padding: 0 20px;
 }
 
-h1 {
-  font-size: 40px;
-  line-height: 50px;
+.header h1 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.header p {
+  font-size: 14px;
+  line-height: 20px;
 }
 
 p {
@@ -80,13 +89,35 @@ p {
   outline: none;
 }
 
-.control .input-fail + small {
-  opacity: 1;
-}
-
 .input:focus {
   border: 1px solid hsl(248, 32%, 49%);
   outline: none;
+}
+
+.input.input-fail::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(0, 100%, 74%);
+  opacity: 1; /* Firefox */
+}
+
+.input.input-fail:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(0, 100%, 74%);
+}
+
+.input.input-fail::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(0, 100%, 74%);
+}
+
+.input.input-fail {
+  border: 2px solid hsl(0, 100%, 74%);
+  color: hsl(0, 100%, 74%);
+}
+
+.control .input-fail + small {
+  opacity: 1;
+  color: hsl(0, 100%, 74%);
 }
 
 button {
@@ -120,7 +151,7 @@ button:active {
 
 small {
   color: #bbb;
-  font-size: 12px;
+  font-size: 13px;
   margin-top: 10px;
   display: block;
   font-weight: 500;
@@ -133,13 +164,35 @@ small a {
 }
 
 @media screen and (max-width: 768px) {
-  h1 {
+  .header h1 {
     text-align: center;
+    font-size: 22px;
+    line-height: normal;
+  }
+  .header p {
+    margin-bottom: 50px;
   }
   p {
     text-align: center;
   }
   .container {
     flex-direction: column;
+    padding: 50px 5px;
+  }
+  .box {
+    padding: 25px 20px;
+  }
+  .box-blue {
+    padding: 15px 50px;
+  }
+  .control {
+    margin-bottom: 25px;
+  }
+  .input {
+    font-size: 12px;
+    padding: 15px;
+  }
+  button {
+    padding: 15px;
   }
 }

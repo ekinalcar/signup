@@ -71,7 +71,7 @@ class App extends Component {
     const { inputs, errors } = this.state;
     return (
       <div className="container">
-        <div>
+        <div className="header">
           <h1> Learn to code by watching others</h1>
           <p>
             See how experienced developers solve problems in real-time. Watching
@@ -91,7 +91,9 @@ class App extends Component {
             </p>
           </div>
           <form className="box form">
-            <div className="control">
+            <div
+              className={errors.firstName ? "control control-fail" : "control"}
+            >
               <input
                 className={errors.firstName ? "input input-fail" : "input"}
                 name="firstName"
@@ -103,7 +105,9 @@ class App extends Component {
               />
               <small>First Name cannot be empty</small>
             </div>
-            <div className="control">
+            <div
+              className={errors.lastName ? "control control-fail" : "control"}
+            >
               <input
                 className={errors.lastName ? "input input-fail" : "input"}
                 name="lastName"
@@ -115,7 +119,7 @@ class App extends Component {
               />
               <small>Last Name cannot be empty</small>
             </div>
-            <div className="control">
+            <div className={errors.email ? "control control-fail" : "control"}>
               <input
                 className={errors.email ? "input input-fail" : "input"}
                 name="email"
@@ -127,7 +131,9 @@ class App extends Component {
               />
               <small>Email cannot be empty</small>
             </div>
-            <div className="control">
+            <div
+              className={errors.password ? "control control-fail" : "control"}
+            >
               <input
                 className={errors.password ? "input input-fail" : "input"}
                 name="password"
