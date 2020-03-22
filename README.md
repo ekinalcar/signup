@@ -1,3 +1,6 @@
+![alt text](https://github.com/ekinalcar/signup/blob/master/src/assets/design/desktop-design.jpg)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
